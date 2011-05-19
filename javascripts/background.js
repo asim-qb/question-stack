@@ -41,6 +41,7 @@ function storeResults(data)
         var questions = JSON.parse(db.getItem(storage));
         if (!questions) { questions = []; }
     } catch(e) {
+        console.log('questions not found');
         var questions = [];
     }
 

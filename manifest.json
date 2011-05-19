@@ -11,7 +11,9 @@
     "background_page": "background.html",
     "browser_action": 
     {
-        "popup": "popup.html"
+        "default_popup": "popup.html",
+        "default_title": "Question Stack",
+        "default_icon": "images/16.png"
     },
     "permissions": 
     [
