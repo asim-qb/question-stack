@@ -1,7 +1,7 @@
 {
-    "name": "Question Stack",
+    "name": "QuestionStack",
     "version": "1.0",
-    "description": "Question Stack delivers tag specific, unanswered question to your browser every minute.",
+    "description": "Every minute, QuestionStack will deliver you a fresh batch of unanswered questions from StackOverflow for a given set of tags.",
     "icons":
     {
         "16": "images/16.png",
@@ -12,12 +12,8 @@
     "browser_action": 
     {
         "default_popup": "popup.html",
-        "default_title": "Question Stack",
+        "default_title": "QuestionStack",
         "default_icon": "images/16.png"
-    },
-    "permissions": 
-    [
-        "notifications"
-    ]
+    }
 }
 

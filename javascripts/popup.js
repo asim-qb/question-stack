@@ -1,6 +1,5 @@
 // request questions array
 
-ispopup = 'yesapopup';
 var appid = 'igaghfhadhbopihianlkncjlglafkgaf';
 
 chrome.extension.sendRequest(appid, { 'initialize': true }, function() {});
