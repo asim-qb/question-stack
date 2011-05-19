@@ -1,15 +1,15 @@
 var db = window.localStorage;
 var storage = 'questions';
 var appid = 'igaghfhadhbopihianlkncjlglafkgaf';
-var maxLength = 6;
+var maxStore = 24;
 var tags = db.getItem('tags');
 
 // whenever a popup opens, provide it with questions
 
 chrome.extension.onRequest.addListener(function(request) { 
     if (request.initialize) {
-       sendQuestions();
-       sendTags();
+        sendQuestions();
+        sendTags();
     }
     if (request.tags) {
         tags = request.tags;
@@ -22,7 +22,7 @@ chrome.extension.onRequest.addListener(function(request) {
 
 function requestData()
 {
-    var url = 'http://api.stackoverflow.com/1.1/questions/unanswered?pagesize=6&tagged=' + (tags ? tags : '');
+    var url = 'http://api.stackoverflow.com/1.1/questions/unanswered?pagesize=' + maxStore + '&tagged=' + (tags ? tags : '');
     $.ajax({
         type: 'GET',
         url: url,
@@ -45,10 +45,9 @@ function storeResults(data)
         var questions = [];
     }
 
-    // we want questions to be an array of question objects of length < maxLength
-    questions = newQuestions.concat(questions).splice(0, maxLength);
+    // we want questions to be an array of question objects of length < maxStore
+    questions = newQuestions.concat(questions).splice(0, maxStore);
     db.setItem(storage, JSON.stringify(questions));
-    sendQuestions();
 }
 
 function sendQuestions()
