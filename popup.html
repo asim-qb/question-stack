@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheets/main.css" />
+    </head>
+
+    <body>
+        <!-- this block will be cloned and copied into container for each question -->
+        <div class="block" id="template">
+            <div class="stats">
+                <div class="inner">
+                    <div class="votes"></div>
+                    <div class="answers unanswered"></div>
+                    <div class="views"></div>
+                </div>
+            </div>
+
+            <div class="question">
+                <a class="title" target="blank" href="#"></a>
+                <div class="meta">
+                    <div class="user">
+                        <a target="blank" href="#"></a> <span class="karma"></span>
+                    </div>
+
+                    <div class="tags"></div>
+                </div>
+            </div>
+        </div>
+
+        <form class="settings">
+            Space delimited tags: <input type="text" /> <span class="currentTags"></span>
+        </form>
+
+        <div id="container">
+        </div>
+    </body>
+
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/popup.js"></script>
+</html>

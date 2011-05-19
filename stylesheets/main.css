@@ -1,0 +1,29 @@
+@import 'reset.css';
+
+body { width:420px; font:normal 62.5% Arial; }
+a { color:#07C; text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+#template { display:none; }
+
+.settings { background:#eee; padding:3px 6px; }
+    .settings input { width:140px; border-top:1px solid #CCC; border-left:1px solid #CCC; font:normal 12px Trebuchet MS, Liberation Sans, DejaVu Sans, sans-serif; }
+    .settings .currentTags { margin-left:10px; color:#777; }
+
+.block { position:relative; margin-bottom:11px; padding:0 5px 15px 5px; border-bottom:1px dotted #999; line-height:0em; }
+    .stats, .question { display:inline-block; top:0; }
+    .stats { width:60px; }
+    .stats .inner { position:absolute; top:0; }
+    .stats div { display:block; font-size:11px; line-height:1.2em; }
+        .votes { color:#555; }
+        .answered { color:#75845C; }
+        .unanswered { color:#9A4444; }
+        .views { color:#999; }
+
+    .question { width:340px; }
+        .title { margin-bottom:1em; font:bold 14px Trebuchet MS, Liberation Sans, DejaVu Sans, sans-serif; display:block; }
+        .meta { font-size:11px; }
+            .user { font-size:12px; float:right; }
+            .karma { font-weight:bold; color:#444; }
+            .tags a { padding:3px 4px; margin:2px 2px 2px 0; text-decoration:none; color:#3E6D8E; background:#E0EAF1; border-bottom:1px solid #3E6D8E; border-right:1px solid #7F9FB6; }
+            .tags a:hover { color:#E0EAF1; background:#3E6D8E; border-bottom:1px solid #37607D; border-right:1px solid #37607D; }

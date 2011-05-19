@@ -1,0 +1,21 @@
+{
+    "name": "Question Stack",
+    "version": "1.0",
+    "description": "Question Stack delivers tag specific, unanswered question to your browser every minute.",
+    "icons":
+    {
+        "16": "images/16.png",
+        "48": "images/48.png",
+        "128": "images/128.png"
+    },
+    "background_page": "background.html",
+    "browser_action": 
+    {
+        "popup": "popup.html"
+    },
+    "permissions": 
+    [
+        "notifications"
+    ]
+}
+
