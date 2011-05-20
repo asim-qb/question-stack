@@ -1,8 +1,6 @@
 // request questions array
 
-var appid = 'igaghfhadhbopihianlkncjlglafkgaf';
-
-chrome.extension.sendRequest(appid, { 'initialize': true }, function() {});
+chrome.extension.sendRequest({ 'initialize': true }); 
 
 chrome.extension.onRequest.addListener(function(request) { 
     if (request.questions) {
@@ -16,7 +14,7 @@ chrome.extension.onRequest.addListener(function(request) {
 // handle filter tags
 
 $('.settings').submit(function() {
-    chrome.extension.sendRequest(appid, { 'tags': $('input', this).val() }, function() {});
+    chrome.extension.sendRequest({ 'tags': $('input', this).val() });
     $('input', this).val('');
     return false;
 });

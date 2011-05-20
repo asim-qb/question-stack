@@ -1,6 +1,5 @@
 var db = window.localStorage;
 var storage = 'questions';
-var appid = 'igaghfhadhbopihianlkncjlglafkgaf';
 var maxStore = 24;
 var tags = db.getItem('tags');
 
@@ -53,12 +52,12 @@ function storeResults(data)
 function sendQuestions()
 {
     var questions = JSON.parse(db.getItem(storage));
-    chrome.extension.sendRequest(appid, { 'questions': questions }, function() {});
+    chrome.extension.sendRequest({ 'questions': questions });
 }
 
 function sendTags()
 { 
-    chrome.extension.sendRequest(appid, { 'tags': tags }, function() {});
+    chrome.extension.sendRequest({ 'tags': tags });
 }
 
 setInterval(requestData, 60e3);
